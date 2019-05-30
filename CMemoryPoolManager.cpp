@@ -65,7 +65,10 @@ void CMemoryPoolManager::ReleaseItem(CMemoryPoolItem* Item)
 	for (it = m_ItemsList.begin(); it != m_ItemsList.end(); ++it)
 	{
 		if (Item == *it)
+		{
 			AlreadyExists = true;
+			break;
+		}
 	}
 
 	if (!AlreadyExists)
